@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-0.1 (unreleased)
-----------------
+0.1.a1 (2018-05-07)
+-------------------
 
 - Initial release.
   [gotcha]
