@@ -25,6 +25,8 @@ def fixObj(obj):
             result.extend(fixObj(subobj))
     if isinstance(obj, OrderedBTreeFolderBase):
         ordering = obj.getOrdering()
+        if not hasattr(ordering, '_pos') or not hasattr(ordering, '_order'):
+            return result
         if len(ordering._pos()) != len(ordering._order()):
             for index, id in enumerate(ordering._order()):
                 if id not in ordering._pos():

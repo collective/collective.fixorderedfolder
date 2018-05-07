@@ -5,7 +5,8 @@ Changelog
 0.1a4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Defend against UnorderedOrdering.
+  [gotcha]
 
 
 0.1a3 (2018-05-07)
