@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1a3 (unreleased)
+0.1a3 (2018-05-07)
 ------------------
 
 - ``plone.api`` is required only by tests. 
