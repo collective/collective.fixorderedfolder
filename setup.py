@@ -41,11 +41,11 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'plone.api',
         'setuptools',
     ],
     extras_require={
         'test': [
+            'plone.api',
             'plone.app.testing',
         ],
     },

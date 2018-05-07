@@ -5,7 +5,8 @@ Changelog
 0.1a3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- ``plone.api`` is required only by tests. 
+  [gotcha]
 
 
 0.1a2 (2018-05-07)
