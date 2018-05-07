@@ -2,7 +2,6 @@
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
 from plone.app.testing import PloneWithPackageLayer
-from plone.testing import z2
 
 import collective.fixorderedfolder
 

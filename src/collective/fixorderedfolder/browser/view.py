@@ -6,7 +6,7 @@ logger = logging.getLogger('collective.fixorderedfolder')
 
 
 class FixView(BrowserView):
-    
+
     def __call__(self):
         result = list()
         result.extend(fixObj(self.context))
@@ -25,18 +25,21 @@ def fixObj(obj):
             result.extend(fixObj(subobj))
     if isinstance(obj, OrderedBTreeFolderBase):
         ordering = obj.getOrdering()
-        if len(ordering._pos()) <> len(ordering._order()):
+        if len(ordering._pos()) != len(ordering._order()):
             for index, id in enumerate(ordering._order()):
                 if id not in ordering._pos():
                     if id in obj.objectIds():
                         del ordering._order()[index]
                         ordering.notifyAdded(id)
-                        result.append('%s in folder %s' %
-                                (id, path))
-        if len(ordering._pos()) <> len(ordering._order()):
-            logger.info('issue in ordering support of %s could not be fixed.' % path)
+                        result.append('%s in folder %s' % (id, path))
+        if len(ordering._pos()) != len(ordering._order()):
+            logger.info(
+                'issue in ordering support of %s could not be fixed.' % path
+            )
         for id in ordering._pos():
             if id not in ordering._order():
-                logger.info('id %s exists in _pos but not in _order of folder %s.'
-                    % (id, path))
+                logger.info(
+                    'id %s exists in _pos but not in _order of folder %s.'
+                    % (id, path)
+                )
     return result

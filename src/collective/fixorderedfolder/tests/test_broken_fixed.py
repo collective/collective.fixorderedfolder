@@ -17,7 +17,7 @@ class TestBrokenFixed(unittest.TestCase):
         """Custom shared utility setup for tests."""
         self.portal = self.layer['portal']
         self.installer = api.portal.get_tool('portal_quickinstaller')
-        
+
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
         api.content.create(self.portal, type='Folder', id='broken')
         api.content.create(self.portal.broken, type='Folder', id='sub')
@@ -35,7 +35,7 @@ class TestBrokenFixed(unittest.TestCase):
             self.portal.broken.doc.setId('renamed')
         with self.assertRaises(ValueError):
             self.portal.broken.sub.doc.setId('renamed')
-    
+
         result = self.portal.restrictedTraverse('fixOrderedFolders')()
         self.assertTrue('all ok' not in result)
         result = self.portal.restrictedTraverse('fixOrderedFolders')()
