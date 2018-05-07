@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1a2 (unreleased)
+0.1a2 (2018-05-07)
 ------------------
 
 - Fix broken classifier
