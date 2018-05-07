@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1a4 (unreleased)
+0.1a4 (2018-05-07)
 ------------------
 
 - Defend against UnorderedOrdering.
