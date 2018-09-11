@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1a5 (unreleased)
+0.1a5 (2018-09-11)
 ------------------
 
 - Refactor diagnose and fix algorithm.
