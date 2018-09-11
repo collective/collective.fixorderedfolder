@@ -5,7 +5,8 @@ Changelog
 0.1a5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Refactor diagnose and fix algorithm.
+  [gotcha]
 
 
 0.1a4 (2018-05-07)
